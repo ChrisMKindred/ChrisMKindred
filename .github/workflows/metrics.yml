@@ -25,8 +25,7 @@ jobs:
           plugin_habits_from: 1000
           config_timezone: America/New_York
           config_output: svg
-          config_order: base.header, base.activity, base.community, base.repositories, base.metadata, languages, isocalendar, habits, habit_facts, habits_charts
+          #`config_order: base.header, introduction, base.activity+community, base.repositories, base.metadata, languages, isocalendar, habits, habit_facts, habits_charts
           config_display: large
           optimize: svg
           experimental_features: --optimize-svg
-          
