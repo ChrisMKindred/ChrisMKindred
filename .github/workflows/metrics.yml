@@ -13,12 +13,15 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          plugin_isocalendar_duration: full-year
           plugin_languages: yes
-          plugin_languages_details: lines, bytes-size
+          plugin_languages_details: percentage, bytes-size
           plugin_languages_ignored: blade, html, css
+          plugin_languages_limit: 8
           plugin_habits: yes
+          plugin_habits_facts: yes
           plugin_habits_charts: yes
+          plugin_habits_trim: yes
           plugin_habits_days: 30
           plugin_habits_from: 1000
           config_timezone: America/New_York
