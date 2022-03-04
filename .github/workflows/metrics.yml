@@ -1,11 +1,10 @@
 name: Metrics
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
+  schedule: 
+    cron: "0 0 * * *"
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  push:
+    branches: "main"
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -25,7 +24,6 @@ jobs:
           plugin_habits_from: 1000
           config_timezone: America/New_York
           config_output: svg
-          #`config_order: base.header, introduction, base.activity+community, base.repositories, base.metadata, languages, isocalendar, habits, habit_facts, habits_charts
           config_display: large
           optimize: svg
           experimental_features: --optimize-svg
