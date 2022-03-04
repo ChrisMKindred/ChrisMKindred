@@ -13,19 +13,19 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header
+          base: header, activity, community, repositories, metadata
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
           plugin_languages_details: lines, bytes-size
           plugin_habits: yes
           plugin_habits_facts: yes
-          plugin_habits_carts: yes
+          plugin_habits_charts: yes
           plugin_habits_days: 30
           plugin_habits_from: 1000
           config_timezone: America/New_York
           config_output: svg
-          config_order: base.header, isocalendar, languages, habits, habit_facts, habits_carts
+          config_order: base, languages, isocalendar, habits, habit_facts, habits_charts
           config_display: large
           optimize: svg
           experimental_features: --optimize-svg
